@@ -8,19 +8,19 @@ $(document).ready(function(){
         loop: true,
     });
 
-    let lastScroll = 0;
-    let heroHeight = $(".hero-section").first().height();
-    $(window).scroll(function(e){
-        let thisScroll = $(this).scrollTop();
-        if ((thisScroll < lastScroll && thisScroll > (heroHeight / 2)))
-            $("nav").first().addClass("nav-fixed").removeClass("nav-hide");
-        else if (thisScroll < 80)
-            $("nav").first().removeClass("nav-fixed").removeClass("nav-hide");
-        else
-            $("nav").first().removeClass("nav-fixed").addClass("nav-hide");
+    // let lastScroll = 0;
+    // let heroHeight = $(".hero-section").first().height();
+    // $(window).scroll(function(e){
+    //     let thisScroll = $(this).scrollTop();
+    //     if ((thisScroll < lastScroll && thisScroll > (heroHeight / 2)))
+    //         $("nav").first().addClass("nav-fixed").removeClass("nav-hide");
+    //     else if (thisScroll < 80)
+    //         $("nav").first().removeClass("nav-fixed").removeClass("nav-hide");
+    //     else
+    //         $("nav").first().removeClass("nav-fixed").addClass("nav-hide");
 
-        lastScroll = thisScroll;
-    });
+    //     lastScroll = thisScroll;
+    // });
     if (!navigator.userAgentData.mobile)
         animateOnHover();
 
