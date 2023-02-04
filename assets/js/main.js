@@ -8,21 +8,36 @@ $(document).ready(function(){
         loop: true,
     });
 
-    // let lastScroll = 0;
-    // let heroHeight = $(".hero-section").first().height();
-    // $(window).scroll(function(e){
-    //     let thisScroll = $(this).scrollTop();
-    //     if ((thisScroll < lastScroll && thisScroll > (heroHeight / 2)))
-    //         $("nav").first().addClass("nav-fixed").removeClass("nav-hide");
-    //     else if (thisScroll < 80)
-    //         $("nav").first().removeClass("nav-fixed").removeClass("nav-hide");
-    //     else
-    //         $("nav").first().removeClass("nav-fixed").addClass("nav-hide");
+    let lastScroll = 0;
+    let heroHeight = $(".hero-section").first().height();
+    $(window).scroll(function(e){
+        let thisScroll = $(this).scrollTop();
+        if ((thisScroll < lastScroll && thisScroll > (heroHeight / 2)))
+            $("nav").first().addClass("nav-fixed").removeClass("nav-hide");
+        else if (thisScroll < 80)
+            $("nav").first().removeClass("nav-fixed").removeClass("nav-hide");
+        else
+            $("nav").first().removeClass("nav-fixed").addClass("nav-hide");
 
-    //     lastScroll = thisScroll;
-    // });
-    if (!navigator.userAgentData.mobile)
+        lastScroll = thisScroll;
+    });
+    if (!navigator.userAgentData.mobile){
         animateOnHover();
+        let lastScroll = 0;
+        let heroHeight = $(".hero-section").first().height();
+        $(window).scroll(function(e){
+            let thisScroll = $(this).scrollTop();
+            if ((thisScroll < lastScroll && thisScroll > (heroHeight / 2)))
+                $("nav").first().addClass("nav-fixed").removeClass("nav-hide");
+            else if (thisScroll < 80)
+                $("nav").first().removeClass("nav-fixed").removeClass("nav-hide");
+            else
+                $("nav").first().removeClass("nav-fixed").addClass("nav-hide");
+
+            lastScroll = thisScroll;
+        });
+    }
+        
 
     $("#offcanvasNavbar").on("hidden.bs.offcanvas", function(){
         $("nav").removeClass("open-canvas");
