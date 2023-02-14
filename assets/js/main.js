@@ -3,22 +3,36 @@ $(document).ready(function(){
         stringsElement: '#typed-strings2',
         typeSpeed: 50,
         backSpeed: 50,
-        backDelay: 0,
-        startDelay: 500,
+        backDelay: 200,
+        startDelay: 200,
         loop: true,
     });
 
     if (!navigator.userAgentData.mobile){
         animateOnHover();
         animateNavbar();
+        
+    }
+    else {
+        $("#projects").find("[data-aos='fade-left']").attr("data-aos", "fade-up");
+        $("#projects").find("[data-aos='fade-right']").attr("data-aos", "fade-up");
     }
     
+
     $("#offcanvasNavbar").on("hidden.bs.offcanvas", function(){
         $("nav").removeClass("open-canvas");
     })
     $("#offcanvasNavbar").on("show.bs.offcanvas", function(){
         $("nav").addClass("open-canvas");
     })
+
+    
+    setTimeout(function() {
+        $("#resume-btn").addClass("fix-transition");
+        $("#custom-btn2-experience").addClass("fix-transition");
+        $("#custom-btn2-contact").addClass("fix-transition");
+        $("#contact-btn1").addClass("fix-transition");
+    }, 1000);
 });
 
 
@@ -58,11 +72,12 @@ function animateOnHover(){
     })
 }
 
-let lastScroll = 0;
-let heroHeight = $(".hero-section").first().height();
+
 function animateNavbar(){
+    let lastScroll = 0;
+    let heroHeight = $(".hero-section").first().height();
     $(window).scroll(function(e){
-        let thisScroll = $(this).scrollTop();
+        thisScroll = $(this).scrollTop();
         if ((thisScroll < lastScroll && thisScroll > (heroHeight / 2)))
             $("nav").first().addClass("nav-fixed").removeClass("nav-hide");
         else if (thisScroll < 80)
