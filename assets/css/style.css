@@ -23,6 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+    /* overflow-x: hidden; */
+}
 body {
 	line-height: 1;
     overflow-y: scroll!important;
@@ -278,7 +281,7 @@ section {
     height: 100%;
 }
 .project-row {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-bottom: 80px;
     display: flex;
     align-items: center;
@@ -333,7 +336,7 @@ a {
 	width: 60px;
 }
 
-.project-row .row-link span {
+/* .project-row .row-link span {
 	position: absolute;
 	display: block;
 	width: 60px;
@@ -367,7 +370,7 @@ a {
 	top: 14px;
 	right: 0;
 	transform: rotate(-45deg);
-}
+} */
 
 .project-row:hover span:before {
 	width: 24px;
@@ -403,6 +406,9 @@ a {
     color: #1c1d25;
     /* font-size: var(--fz-sm); */
     line-height: 12px;
+}
+#projects {
+    overflow: hidden;
 }
 .bold {
     font-weight: bold;
@@ -1101,6 +1107,117 @@ a:active, a:hover {
 .open-canvas {
     transform:unset;
     transition: unset;
+}
+
+.black-white {
+    display: flex;
+    overflow: hidden;
+}
+.half-section {
+    width: 50%;
+}
+#details p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 1.2;
+}
+#about ul {
+    font-size: 18px;
+}
+#about ul li {
+    display: flex;
+    flex-direction: column;
+}
+#about ul li::before {
+    content:none;
+}
+.skill-title {  
+    font-weight: bold;
+    font-size: 24px;
+    
+}
+.skill-title b {
+    transition: all 0.3s ease-in-out;
+}
+.skill-details {
+    padding-left: 40px;
+    /* transition: all 0.3s ease-in-out; */
+    font-size: 20px;
+    line-height: 1.2;
+}
+.skill-div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.skill-div-row {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.skill-div:hover .skill-title b {
+    padding-left: 15px;
+}
+/* #about ol {
+	columns: 25rem;
+	column-gap: 7rem;
+	border-radius: 0.5rem;
+}
+
+#about ol > * + * {
+	margin-top: 1rem;
+}
+
+#about li {
+	break-inside: avoid;
+}
+
+::marker {
+	content: counters(list-item, '') ': ';
+	font-weight: 700;
+	font-size: 24px;
+}
+
+#about li span {
+	display: block;
+}
+
+#about li span:first-child {
+	font-size: 1.5em;
+    font-size: 24px;
+}
+
+#about li span:last-child {
+    font-size: 20px;
+} */
+#details .section-title{
+    padding-bottom: 30px;
+}
+#details p{
+    font-family: var(--secondary-font-family);
+    font-size: 20px;
+    line-height: 1.5;
+}
+#details .small-title{
+    font-size: 24px;
+}
+#details .main-color {
+    /* color: var(--primary-font); */
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.black-white-body {
+    padding-left: 15px;
+    padding-right: 30px;
+}
+#details .section-dark .black-white-body:hover .main-color{
+    color: var(--primary-font);
+}
+#details .small-title {
+    padding-bottom: 0px;
+    padding-top: 30px;
+}
+.fix-transition {
+    transition: all 0.3s ease-in-out!important;
 }
 @media only screen and (max-width: 992px) {
     .buttons-div {
