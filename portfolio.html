@@ -21,12 +21,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+NKo&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/aos.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JSEVMSLXJE"></script>
     
     <script src="/assets/js/jquery-3.6.3.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="/assets/js/typed.js"></script>
+    <script src="/assets/js/aos.js"></script>
     <script src="/assets/js/main.js"></script>
     <script defer>
         window.dataLayer = window.dataLayer || [];
@@ -40,8 +42,8 @@
     <header>
         <nav class="navbar navbar-custom navbar-expand-md">
             <div class="container-fluid">
-              <a class="navbar-brand custom-btn2" href="#">Resume</a>
-              <a class="navbar-toggler" type="button" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Navbar Toggle">
+              <a class="navbar-brand custom-btn2" href="#" data-aos-once="true" data-aos="fade-right" data-aos-delay="800" id="resume-btn">Resume</a>
+              <a class="navbar-toggler" type="button" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Navbar Toggle" data-aos-once="true" data-aos="fade-left" data-aos-delay="800">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50pt" height="50pt" version="1.1" viewBox="0 0 700 700" style="fill: white;">
                     <defs>
                      <symbol id="v" overflow="visible">
@@ -125,7 +127,7 @@
                     <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55  c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55  c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505  c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55  l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719  c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/>
                 </svg>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body" data-aos-once="true" data-aos="fade-left" data-aos-delay="800">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
                         <a href="#projects" class="text-hover-animation">Projects</a>
@@ -146,11 +148,11 @@
                         Copy E-mail
                     </button>
                     <div class="social-media">
-                        <a href="linkedin.com" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/omarghouka/" aria-label="LinkedIn" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="430.117" height="430.117" viewBox="0 0 430.117 430.117"><path d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"></path></svg>
                         </a>
                         <a href="whatsapp.com" aria-label="WhatsApp">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612"><path d="M612 116.258c-22.525 9.98-46.694 16.75-72.088 19.772 25.93-15.527 45.777-40.155 55.184-69.41-24.322 14.378-51.17 24.82-79.775 30.48-22.906-24.438-55.49-39.66-91.63-39.66-69.333 0-125.55 56.218-125.55 125.514 0 9.828 1.11 19.427 3.25 28.606-104.325-5.24-196.834-55.223-258.75-131.174-10.822 18.51-16.98 40.078-16.98 63.1 0 43.56 22.182 81.994 55.836 104.48-20.575-.688-39.926-6.348-56.867-15.756v1.568c0 60.806 43.29 111.554 100.692 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.2 117.253 87.194-42.946 33.655-97.098 53.656-155.915 53.656-10.134 0-20.116-.612-29.944-1.72 55.568 35.68 121.537 56.484 192.44 56.484 230.947 0 357.187-191.29 357.187-357.188l-.42-16.253C573.87 163.525 595.21 141.42 612 116.257z" fill="#010002"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="430.117" height="430.117" fill-rule="nonzero"><g fill-opacity="0" fill="#dddddd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M12.01172,2c-5.506,0 -9.98823,4.47838 -9.99023,9.98438c-0.001,1.76 0.45998,3.47819 1.33398,4.99219l-1.35547,5.02344l5.23242,-1.23633c1.459,0.796 3.10144,1.21384 4.77344,1.21484h0.00391c5.505,0 9.98528,-4.47937 9.98828,-9.98437c0.002,-2.669 -1.03588,-5.17841 -2.92187,-7.06641c-1.886,-1.887 -4.39245,-2.92673 -7.06445,-2.92773zM12.00977,4c2.136,0.001 4.14334,0.8338 5.65234,2.3418c1.509,1.51 2.33794,3.51639 2.33594,5.65039c-0.002,4.404 -3.58423,7.98633 -7.99023,7.98633c-1.333,-0.001 -2.65341,-0.3357 -3.81641,-0.9707l-0.67383,-0.36719l-0.74414,0.17578l-1.96875,0.46484l0.48047,-1.78516l0.2168,-0.80078l-0.41406,-0.71875c-0.698,-1.208 -1.06741,-2.58919 -1.06641,-3.99219c0.002,-4.402 3.58528,-7.98437 7.98828,-7.98437zM8.47656,7.375c-0.167,0 -0.43702,0.0625 -0.66602,0.3125c-0.229,0.249 -0.875,0.85208 -0.875,2.08008c0,1.228 0.89453,2.41503 1.01953,2.58203c0.124,0.166 1.72667,2.76563 4.26367,3.76563c2.108,0.831 2.53614,0.667 2.99414,0.625c0.458,-0.041 1.47755,-0.60255 1.68555,-1.18555c0.208,-0.583 0.20848,-1.0845 0.14648,-1.1875c-0.062,-0.104 -0.22852,-0.16602 -0.47852,-0.29102c-0.249,-0.125 -1.47608,-0.72755 -1.70508,-0.81055c-0.229,-0.083 -0.3965,-0.125 -0.5625,0.125c-0.166,0.25 -0.64306,0.81056 -0.78906,0.97656c-0.146,0.167 -0.29102,0.18945 -0.54102,0.06445c-0.25,-0.126 -1.05381,-0.39024 -2.00781,-1.24024c-0.742,-0.661 -1.24267,-1.47656 -1.38867,-1.72656c-0.145,-0.249 -0.01367,-0.38577 0.11133,-0.50977c0.112,-0.112 0.24805,-0.2915 0.37305,-0.4375c0.124,-0.146 0.167,-0.25002 0.25,-0.41602c0.083,-0.166 0.04051,-0.3125 -0.02149,-0.4375c-0.062,-0.125 -0.54753,-1.35756 -0.76953,-1.85156c-0.187,-0.415 -0.3845,-0.42464 -0.5625,-0.43164c-0.145,-0.006 -0.31056,-0.00586 -0.47656,-0.00586z"></path></g></g></svg>                        </a>
                         </a>
                     </div>
                 </div>
@@ -161,7 +163,7 @@
       
     <div class="hero-section move-element-parent">
         <div class="container hero-container">
-            <div class="inner-hero">
+            <div class="inner-hero" data-aos-once="true" data-aos="fade-up">
                 <h1 class="shadow-text move-element">Omar Ghouka</h1>
 
                 <h2>/<label class="">Full-Stack </label> Developer</h2>
@@ -169,9 +171,9 @@
                 <h2>/<label class="">Software </label> Developer</h2>
             </div>
             <div class="inner-hero hero-text">
-                <h3>I'm a Full-Stack Developer that likes to build</h3>
+                <h3 data-aos-once="true" data-aos="fade-up" data-aos-delay="200">I'm a Full-Stack Developer that likes to build</h3>
                 <br>
-                <h3 class="bold">
+                <h3 class="bold" data-aos-once="true" data-aos="fade-up" data-aos-delay="300">
                     <div id="typed-strings2" class="hide-typed">
                         <p>Websites.</p>
                         <p>Web Applications.</p>
@@ -179,15 +181,15 @@
                         <p>ERP Systems.</p>
                     </div>
                     <span id="typed2" class="typed-text"></span>
-                    </h3>
+                </h3>
                 <br>
-                <h3>4 Years of Experience in Full-Stack and Software Development.</h3>
+                <h3 data-aos-once="true" data-aos="fade-up" data-aos-delay="400">4 Years of Experience in Full-Stack and Software Development.</h3>
 
                 <div class="buttons-div">
-                    <a class="custom-btn2" href="#experience">
+                    <a class="custom-btn2" href="#experience" data-aos-once="true" data-aos="fade-up" data-aos-delay="600" id="custom-btn2-experience">
                         Experience
                     </a>
-                    <a class="custom-btn2" href="#contact">
+                    <a class="custom-btn2" href="#contact" data-aos-once="true" data-aos="fade-up" data-aos-delay="700" id="custom-btn2-contact">
                         About
                     </a>
                 </div>
@@ -195,23 +197,26 @@
             </div>
             
         </div>
-        <a href="#projects" data-scroll="" class="hero-go-next no-smoothstate">
-            <div class="go-next-label">Projects</div>
-            <span class="the-arrow arrow-down"></span>
-        </a>
+        <div data-aos-once="true" data-aos="fade-up" data-aos-delay="1000" data-aos-offset="-200" style="position: absolute;bottom: 0;right: 50%;">
+            <a href="#projects" data-scroll="" class="hero-go-next no-smoothstate">
+                <div class="go-next-label">Projects</div>
+                <span class="the-arrow arrow-down"></span>
+            </a>
+        </div>
+        
     </div>
 
     <section class="section-white" id="projects">
         <div class="container">
-            <h1 class="section-title text-center">Latest Projects</h1>
-            <div class="row project-row">
+            <h1 class="section-title text-center" data-aos-once="true" data-aos="fade-up">Latest Projects</h1>
+            <div class="row project-row" style="padding-top: 80px;">
                 <div class="col-lg-8">
                     <div class="custom-card">
-                        <img src="assets/images/kcr.webp" class="move-element"  alt="Kensington"/>
+                        <img src="assets/images/kcr.webp" class="move-element"  alt="Kensington"  data-aos-once="true" data-aos="fade-right"/>
                     </div>
                     
                 </div>
-                <div class="col-lg-4 project-row-link">
+                <div class="col-lg-4 project-row-link" data-aos-once="true" data-aos="fade-left">
                     <div class="text-center">
                         <a href="https://kcrdubai.com/pages/home.aspx" class="row-link" target="_blank">Kensington<span></span></a>
                     </div><br>
@@ -239,11 +244,11 @@
             <div class="row project-row">
                 <div class="col-lg-8 order-lg-2">
                     <div class="custom-card">
-                        <img src="assets/images/gsc.webp" class="move-element" alt="GSC Capitals"/>
+                        <img src="assets/images/gsc.webp" class="move-element" alt="GSC Capitals" data-aos-once="true" data-aos="fade-left"/>
                     </div>
                     
                 </div>
-                <div class="col-lg-4 order-lg-1 project-row-link">
+                <div class="col-lg-4 order-lg-1 project-row-link" data-aos-once="true" data-aos="fade-right">
                     <div class="text-center">
                         <a href="https://gsccapitalgroup.com/" class="row-link" target="_blank">GSC Capital<span></span></a>
                     </div><br>
@@ -273,11 +278,11 @@
             <div class="row project-row">
                 <div class="col-lg-8">
                     <div class="custom-card">
-                        <img src="assets/images/bnlearning.webp" class="move-element" alt="BN Learning"/>
+                        <img src="assets/images/bnlearning.webp" class="move-element" alt="BN Learning" data-aos-once="true" data-aos="fade-right"/>
                     </div>
                     
                 </div>
-                <div class="col-lg-4 project-row-link">
+                <div class="col-lg-4 project-row-link" data-aos-once="true" data-aos="fade-left">
                     <div class="text-center">
                         <a href="https://web.bnlearning.ca/" class="row-link" target="_blank">BN Learning<span></span></a>
                     </div><br>
@@ -306,11 +311,11 @@
             <div class="row project-row">
                 <div class="col-lg-8 order-lg-2">
                     <div class="custom-card">
-                        <img src="assets/images/corestudios.webp" class="move-element" alt="Core Studios"/>
+                        <img src="assets/images/corestudios.webp" class="move-element" alt="Core Studios" data-aos-once="true" data-aos="fade-left"/>
                     </div>
                     
                 </div>
-                <div class="col-lg-4 order-lg-1 project-row-link">
+                <div class="col-lg-4 order-lg-1 project-row-link" data-aos-once="true" data-aos="fade-right">
                     <div class="text-center">
                         <a href="https://web.corestudios-ad.com/" class="row-link" target="_blank">Core Studios<span></span></a>
                     </div><br>
@@ -339,11 +344,11 @@
             <div class="row project-row">
                 <div class="col-lg-8">
                     <div class="custom-card">
-                        <img src="assets/images/royaltime.webp" class="move-element" alt="Royal Time"/>
+                        <img src="assets/images/royaltime.webp" class="move-element" alt="Royal Time" data-aos-once="true" data-aos="fade-right"/>
                     </div>
                     
                 </div>
-                <div class="col-lg-4 project-row-link">
+                <div class="col-lg-4 project-row-link" data-aos-once="true" data-aos="fade-left">
                     <div class="text-center">
                         <a href="https://royaltimeholidays.ae/Pages/home.aspx" class="row-link" target="_blank">Royal Time<span></span></a>
                     </div><br>
@@ -371,11 +376,11 @@
             <div class="row project-row">
                 <div class="col-lg-8 order-lg-2">
                     <div class="custom-card">
-                        <img src="assets/images/buildplus.webp" class="move-element" alt="Build Plus"/>
+                        <img src="assets/images/buildplus.webp" class="move-element" alt="Build Plus" data-aos-once="true" data-aos="fade-left"/>
                     </div>
                     
                 </div>
-                <div class="col-lg-4 order-lg-1 project-row-link">
+                <div class="col-lg-4 order-lg-1 project-row-link" data-aos-once="true" data-aos="fade-right">
                     <div class="text-center">
                         <a href="https://buildplusapp.com/New.aspx" class="row-link" target="_blank">BuildPlus<span></span></a>
                     </div><br>
@@ -405,12 +410,12 @@
 
     <section class="section-dark" id="experience">
         <div class="container">
-            <h1 class="section-title text-center">Work Experience</h1>
+            <h1 class="section-title text-center" data-aos-once="true" data-aos="fade-up">Work Experience</h1>
             <div class="row example-centered">
                 <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-2">
                     <ul class="timeline timeline-centered">
 
-                        <li class="timeline-item">
+                        <li class="timeline-item" data-aos-once="true" data-aos="fade-up">
                             <div class="timeline-info">
                                 <span>Current</span>
                             </div>
@@ -426,19 +431,19 @@
                             </div>
                         </li>
                         
-                        <li class="timeline-item period">
+                        <li class="timeline-item period" data-aos-once="true" data-aos="fade-up">
                             <div class="timeline-info"></div>
                             <div class="timeline-marker"></div>
                             <div class="timeline-content">
-                                <h2 class="timeline-title">April 2020</h2>
+                                <h2 class="timeline-title">March 2022</h2>
                             </div>
                         </li>
 
                         <li class="timeline-item d-none"></li>
 
-                        <li class="timeline-item">
+                        <li class="timeline-item" data-aos-once="true" data-aos="fade-up">
                             <div class="timeline-info">
-                                <span>March 23, 2022</span>
+                                <span>January 2020</span>
                             </div>
                             <div class="timeline-marker"></div>
                             <div class="timeline-content">
@@ -452,9 +457,9 @@
                             </div>
                         </li>
 
-                        <li class="timeline-item">
+                        <li class="timeline-item" data-aos-once="true" data-aos="fade-up">
                             <div class="timeline-info">
-                                <span>April 02, 2019</span>
+                                <span>January 2019</span>
                             </div>
                             <div class="timeline-marker"></div>
                             <div class="timeline-content">
@@ -468,12 +473,12 @@
                 </div>
             </div>
             <div style="width: 100%;    border-bottom: 3px solid white;"></div>
-            <h1 class="section-title text-center">Education</h1>
+            <h1 class="section-title text-center" data-aos-once="true" data-aos="fade-up">Education</h1>
             <div class="row example-centered">
                 <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-2">
                     <ul class="timeline timeline-centered">
                         <li class="timeline-item d-none"></li>
-                        <li class="timeline-item">
+                        <li class="timeline-item" data-aos-once="true" data-aos="fade-up">
                             <div class="timeline-info">
                                 <span>Current</span>
                             </div>
@@ -484,11 +489,11 @@
                             </div>
                         </li>
                         
-                        <li class="timeline-item period">
+                        <li class="timeline-item period" data-aos-once="true" data-aos="fade-up">
                             <div class="timeline-info"></div>
                             <div class="timeline-marker"></div>
                             <div class="timeline-content">
-                                <h2 class="timeline-title">April 2019</h2>
+                                <h2 class="timeline-title">March 2019</h2>
                             </div>
                         </li>
                     </ul>
@@ -500,49 +505,116 @@
 
     <section class="section-white" id="about">
         <div class="container">
-            <h1 class="section-title text-center">About Me</h1>
+            <h1 class="section-title text-center" data-aos-once="true" data-aos="fade-up">About Me</h1>
             <div class="row about-row">
-                <div class="col-12">
-                    <p>Hello! My name is Omar Ghouka, And i'm a Full-Stack Developer and Studying to be a Software Engineer at SVU (4th Year).</p>
+                <div class="col-12" data-aos-once="true" data-aos="fade-up">
+                    <p>Hello! My name is Omar Ghouka, i'm 25 Years old And i'm a Full-Stack Developer that is currently living in Syria and Studying to be a Software Engineer at SVU (4th Year).</p>
                     <p>I love what i do and what i have done so far for the previous 4 Years, 
                         I worked on various projects as a Software and a Full-Stack Developer for United Arab Emirates and Saudi Arabia.
                         I Enjoy Developing Software, Websites and Web Applications that are fully responsive.</p>
                     <p>I have managed 12+ Servers for Clients (Excluding Test Servers) and 20+ Git Repositories on both GitHub and GitLab.</p>
 
-                    <p>Here's some of the technologies that i use:</p>
+                    <p>Here's some of my skills:</p>
                     
-                    <ul>
-                        <li>Google Cloud Platform (Compute Engine)</li>
-                        <li>DigitalOcean</li>
-                        <li>ASP.Net</li>
-                        <li>C#</li>
-                        <li>Javascript</li>
-                        <li>Frappe</li>
-                        <li>ERPNext</li>
-                        <li>Django</li>
-                        <li>PHP</li>
-                        <li>MySql</li>
-                        <li>MsSQL</li>
-                        <li>MariaDB</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Bootstrap</li>
-                        <li>jQuery</li>
-                        
-                    </ul>
+
+
+                    <div class="row skill-div-row">
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000">
+                            <label class="skill-title">01. <b>Problem Solving</b></label>
+                            <label class="skill-details">Strong problem-solving and debugging skills.</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">
+                            <label class="skill-title">02. <b>Web Development</b></label>
+                            <label class="skill-details">Proficiency in web development technologies such as HTML, CSS, JavaScript (4 Years).</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="2000">
+                            <label class="skill-title">03. <b>Server-Side</b></label>
+                            <label class="skill-details">Strong knowledge of server-side programming languages like Python (4 Years), ASP.NET/C# (4 Years).</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000">
+                            <label class="skill-title">04. <b>Database</b></label>
+                            <label class="skill-details">Experience with databases such as Microsoft SQL Server(4 Years), MySQL and MariaDB (3 Years).</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">
+                            <label class="skill-title">05. <b>Communication</b></label>
+                            <label class="skill-details">Good communication skills and the ability to work well in a team.</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="2000">
+                            <label class="skill-title">06. <b>Advancements</b></label>
+                            <label class="skill-details">Continuously keep up with the latest developments and advancements in web technologies and programming languages.</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000">
+                            <label class="skill-title">07. <b>Security</b></label>
+                            <label class="skill-details">Good understanding of security best practices and experience implementing security measures.</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">
+                            <label class="skill-title">08. <b>Version Control</b></label>
+                            <label class="skill-details">Proficiency in version control systems like GitHub and GitLab.</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="2000">
+                            <label class="skill-title">09. <b>Methodology</b></label>
+                            <label class="skill-details">Familiarity with Agile software development and Waterfall methodologies.</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000">
+                            <label class="skill-title">10. <b>Cloud Computing</b></label>
+                            <label class="skill-details">Great knowledge of cloud computing platforms like Google Cloud Platform (3 Years) and Degital Ocean(1 Year).</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="1500">
+                            <label class="skill-title">11. <b>Documentation</b></label>
+                            <label class="skill-details">Microsft Office (or Google Documents/Sheets/Slides) for documenting applications and creating presentations.</label>
+                        </div>
+                        <div class="col-lg-4 col-md-6 skill-div" data-aos-once="true" data-aos="fade-up" data-aos-duration="2000">
+                            <label class="skill-title">12. <b>Automation</b></label>
+                            <label class="skill-details">Automating backups of files/databases, and automating data checks and insertions.</label>
+                        </div>
+                    </div>
+                    
 
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <section class="black-white" id="details">
+        <div class="row">
+            <div class="col-md-6 order-md-2 section-dark">
+                <h1 class="section-title text-center" data-aos-once="true" data-aos="fade-up">Back-End</h1>
+                <div class="col-md-12 black-white-body" data-aos-once="true" data-aos="fade-up">
+                    <p class="small-title"><label class="main-color">01. C# & ASP.NET</label></p>
+                    <p>I have extensive experience developing backend applications using <label class="main-color">C#</label> and <label class="main-color">ASP.NET</label>. I have used these technologies to build <label class="main-color">robust</label>, <label class="main-color">scalable</label>, <label class="main-color">high-performance</label> applications and effective backend solutions.</p>
+                </div>
+                <div class="col-md-12 black-white-body" data-aos-once="true" data-aos="fade-up">
+                    <p class="small-title"><label class="main-color">02. Python & Frappe & Django</label></p>
+                    <p>I also have extensive experience developing backend applications using <label class="main-color">Python</label> and <label class="main-color">Frappe</label>. I have used these technologies to build a wide range of applications, from simple <label class="main-color">websites</label> to <label class="main-color">complex</label>, <label class="main-color">data-intensive systems</label>. My expertise in <label class="main-color">Python</label> and <label class="main-color">Frappe</label> has allowed me to take advantage of the latest features and capabilities of these technologies.</p>
+                </div>
+                <div class="col-md-12 black-white-body" data-aos-once="true" data-aos="fade-up">
+                    <p class="small-title"><label class="main-color">03. API Integrations</label></p>
+                    <p>Experience integrating a wide range of <label class="main-color">APIs</label> into <label class="main-color">applications</label>, including <label class="main-color">payment Services</label> such as <label class="main-color"><a href="https://www.paypal.com/" target="_blank">PayPal</a></label>, <label class="main-color">Network Payment</label> and <label class="main-color"><a href="https://www.tap.company/" target="_blank">tabPayment</a></label>. I also have integrated multiple other services like <label class="main-color"><a href="https://www.tboholidays.com/" target="_blank">TBOHolidays API</a></label>, Authentation API's for <label class="main-color">Google</label>, <label class="main-color">Microsoft</label> and <label class="main-color">Facebook</label>. I am confident in my ability to use these and other <label class="main-color">APIs</label> to provide seamless experience for the clients.</p>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1 section-white">
+                <h1 class="section-title text-center" data-aos-once="true" data-aos="fade-up">Front-End</h1>
+                <div class="col-md-12 black-white-body" data-aos-once="true" data-aos="fade-up">
+                    <p class="small-title"><label class="main-color">01. HTML & CSS & JavaScript</label></p>
+                    <p>I have a deep understanding of the building blocks of <label class="main-color">modern front-end development</label>, including <label class="main-color">HTML</label>, <label class="main-color">CSS</label>, and <label class="main-color">JavaScript</label>. I have extensive experience using these technologies to build <label class="main-color">responsive</label>, <label class="main-color">dynamic</label>, and <label class="main-color">visually appealing</label> web applications that meet the needs of a wide range of clients. My expertise in HTML, CSS, and JavaScript allows me to create <label class="main-color">high-quality front-end</label> experiences that are both <label class="main-color">functional</label> and <label class="main-color">aesthetically pleasing</label>.</p>
+                </div>
+                <div class="col-md-12 black-white-body" data-aos-once="true" data-aos="fade-up">
+                    <p class="small-title"><label class="main-color">02. Design Implementation</label></p>
+                    <p>In addition to my <label class="main-color">technical skills</label>, I also have a strong eye for <label class="main-color">design</label> and the ability to <label class="main-color">implement designs</label> into my front-end projects. I have experience working with designers to bring their visions to life in the form of fully <label class="main-color">functional</label> and <label class="main-color">visually appealing</label> web applications. My expertise in design implementation allows me to ensure that the end product meets the client's design <label class="main-color">specifications</label> and exceeds their <label class="main-color">expectations</label>.</p>
+                </div>
+                <div class="col-md-12 black-white-body" data-aos-once="true" data-aos="fade-up">
+                    <p class="small-title"><label class="main-color">03. CSS & JS Libraries</label></p>
+                    <p>Implementation of Multiple CSS frameworks like Bootstrap and Material Design, and JavaScript Frameworks Like jQuery, Slick JS, Typed and AOS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <section class="section-dark" id="contact">
         <div class="container">
-            <h1 class="section-title text-center">Get in Touch</h1>
+            <h1 class="section-title text-center" data-aos-once="true" data-aos="fade-up" data-aos-once="true">Get in Touch</h1>
             <div class="row contact-row">
-                <div class="col-12">
+                <div class="col-12"  data-aos-once="true" data-aos="fade-up" data-aos-once="true">
                     <p>Feel Free to get in touch at anytime!</p>
                     <br><br>
                     
@@ -552,12 +624,11 @@
                 </div>
                 <div class="col-12">
                     <div class="social-media">
-                        <a href="linkedin.com" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/omarghouka/" aria-label="LinkedIn" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="430.117" height="430.117" viewBox="0 0 430.117 430.117"><path d="M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"></path></svg>
                         </a>
                         <a href="whatsapp.com" aria-label="WhatsApp">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612"><path d="M612 116.258c-22.525 9.98-46.694 16.75-72.088 19.772 25.93-15.527 45.777-40.155 55.184-69.41-24.322 14.378-51.17 24.82-79.775 30.48-22.906-24.438-55.49-39.66-91.63-39.66-69.333 0-125.55 56.218-125.55 125.514 0 9.828 1.11 19.427 3.25 28.606-104.325-5.24-196.834-55.223-258.75-131.174-10.822 18.51-16.98 40.078-16.98 63.1 0 43.56 22.182 81.994 55.836 104.48-20.575-.688-39.926-6.348-56.867-15.756v1.568c0 60.806 43.29 111.554 100.692 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.2 117.253 87.194-42.946 33.655-97.098 53.656-155.915 53.656-10.134 0-20.116-.612-29.944-1.72 55.568 35.68 121.537 56.484 192.44 56.484 230.947 0 357.187-191.29 357.187-357.188l-.42-16.253C573.87 163.525 595.21 141.42 612 116.257z" fill="#010002"></path></svg>
-                        </a>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="430.117" height="430.117" fill-rule="nonzero"><g fill-opacity="0" fill="#dddddd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M12.01172,2c-5.506,0 -9.98823,4.47838 -9.99023,9.98438c-0.001,1.76 0.45998,3.47819 1.33398,4.99219l-1.35547,5.02344l5.23242,-1.23633c1.459,0.796 3.10144,1.21384 4.77344,1.21484h0.00391c5.505,0 9.98528,-4.47937 9.98828,-9.98437c0.002,-2.669 -1.03588,-5.17841 -2.92187,-7.06641c-1.886,-1.887 -4.39245,-2.92673 -7.06445,-2.92773zM12.00977,4c2.136,0.001 4.14334,0.8338 5.65234,2.3418c1.509,1.51 2.33794,3.51639 2.33594,5.65039c-0.002,4.404 -3.58423,7.98633 -7.99023,7.98633c-1.333,-0.001 -2.65341,-0.3357 -3.81641,-0.9707l-0.67383,-0.36719l-0.74414,0.17578l-1.96875,0.46484l0.48047,-1.78516l0.2168,-0.80078l-0.41406,-0.71875c-0.698,-1.208 -1.06741,-2.58919 -1.06641,-3.99219c0.002,-4.402 3.58528,-7.98437 7.98828,-7.98437zM8.47656,7.375c-0.167,0 -0.43702,0.0625 -0.66602,0.3125c-0.229,0.249 -0.875,0.85208 -0.875,2.08008c0,1.228 0.89453,2.41503 1.01953,2.58203c0.124,0.166 1.72667,2.76563 4.26367,3.76563c2.108,0.831 2.53614,0.667 2.99414,0.625c0.458,-0.041 1.47755,-0.60255 1.68555,-1.18555c0.208,-0.583 0.20848,-1.0845 0.14648,-1.1875c-0.062,-0.104 -0.22852,-0.16602 -0.47852,-0.29102c-0.249,-0.125 -1.47608,-0.72755 -1.70508,-0.81055c-0.229,-0.083 -0.3965,-0.125 -0.5625,0.125c-0.166,0.25 -0.64306,0.81056 -0.78906,0.97656c-0.146,0.167 -0.29102,0.18945 -0.54102,0.06445c-0.25,-0.126 -1.05381,-0.39024 -2.00781,-1.24024c-0.742,-0.661 -1.24267,-1.47656 -1.38867,-1.72656c-0.145,-0.249 -0.01367,-0.38577 0.11133,-0.50977c0.112,-0.112 0.24805,-0.2915 0.37305,-0.4375c0.124,-0.146 0.167,-0.25002 0.25,-0.41602c0.083,-0.166 0.04051,-0.3125 -0.02149,-0.4375c-0.062,-0.125 -0.54753,-1.35756 -0.76953,-1.85156c-0.187,-0.415 -0.3845,-0.42464 -0.5625,-0.43164c-0.145,-0.006 -0.31056,-0.00586 -0.47656,-0.00586z"></path></g></g></svg>                        </a>
                     </div>
                 </div>
             </div>
@@ -566,6 +637,15 @@
     
 
 
-    
+    <script>
+        AOS.init(
+            {
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 1000, // values from 0 to 3000, with step 50ms
+                easing: 'ease', // default easing for AOS animations,
+                once: false, // whether animation should happen only once - while scrolling down
+            }
+        );
+    </script>
 </body>
 </html>
